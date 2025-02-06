@@ -6,3 +6,5 @@ btn.addEventListener("click", () => {
   const num = +counter.textContent;
   counterFunc(counter, num);
 });
+
+
