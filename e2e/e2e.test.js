@@ -30,7 +30,7 @@ describe("test check", () => {
     });
 
     afterAll(async () => {
-        await page.close()
+        // await page.close()
         await browser.close()
         await server.kill();
     });
