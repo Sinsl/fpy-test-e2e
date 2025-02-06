@@ -7,7 +7,7 @@ describe("test check", () => {
     let browser = null;
     let page = null;
     let server = null;
-    const baseUrl = "http://localhost:8087";
+    const baseUrl = "http://localhost:8088";
 
     beforeAll(async () => {
         server = fork(`${__dirname}/e2e.server.js`);
@@ -20,25 +20,19 @@ describe("test check", () => {
             }
         });
 
-        // browser = await puppeteer.launch();
-
         browser = await puppeteer.launch({
             //   headless: false,
                 slowMo: 200,
             //   devtools: false,
-            // args: [`--window-size=1000,1000`],
-            // defaultViewport: {
-            //     width: 1000,
-            //     height: 1000,
-            // },
         });
 
         page = await browser.newPage();
     });
 
     afterAll(async () => {
-        await browser.close();
-        server.kill();
+        await page.close()
+        await browser.close()
+        await server.kill();
     });
 
     test("тест на первый клик, елемент есть на странице", async () => {
