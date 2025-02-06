@@ -22,6 +22,7 @@ describe("test check", () => {
 
         browser = await puppeteer.launch({
             //   headless: false,
+                headless: 'new',
                 slowMo: 200,
             //   devtools: false,
         });
