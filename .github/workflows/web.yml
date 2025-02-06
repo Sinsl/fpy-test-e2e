@@ -41,6 +41,7 @@ jobs:
           node-version: 20.11.0
           # cache: 'off'
       - run: yarn
+      - run: yarn puppeteer browsers install
       - run: yarn test
 
   build:
