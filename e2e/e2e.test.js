@@ -13,7 +13,6 @@ describe("test check", () => {
         server = fork(`${__dirname}/e2e.server.js`);
         await new Promise((resolve, reject) => {
             if (server.connected) {
-                console.log('server start');
                 process.send("ok");
                 resolve();
             } else {
@@ -25,7 +24,7 @@ describe("test check", () => {
 
         browser = await puppeteer.launch({
             //   headless: false,
-            //   slowMo: 200,
+                slowMo: 200,
             //   devtools: false,
             // args: [`--window-size=1000,1000`],
             // defaultViewport: {
