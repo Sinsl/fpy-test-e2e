@@ -20,9 +20,8 @@ build_script:
 
 test_script:
   - yarn lint  # скрипт тестирования
-
-test_script:
-  - yarn test
+  - yarn test 
+  
 
 # deploy_script:  # скрипт развёртывания
 #   - git config --global credential.helper store
