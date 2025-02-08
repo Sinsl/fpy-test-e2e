@@ -23,7 +23,7 @@ describe("test check", () => {
         browser = await puppeteer.launch({
             //   headless: false,
                 // headless: 'new',
-                slowMo: 100,
+                // slowMo: 100,
             //   devtools: false,
         });
 
@@ -32,7 +32,7 @@ describe("test check", () => {
 
     afterAll(async () => {
         // await page.close()
-        await browser.close()
+        // await browser.close()
         await server.kill();
     });
 
