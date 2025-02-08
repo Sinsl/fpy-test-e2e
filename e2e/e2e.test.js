@@ -21,6 +21,7 @@ describe("test check", () => {
         });
         // browser = await puppeteer.launch()
         browser = await puppeteer.launch({
+            executablePath: '/usr/bin/chromium-browser',
             //   headless: false,
                 // headless: 'new',
                 // slowMo: 100,
