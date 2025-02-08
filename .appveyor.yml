@@ -17,9 +17,11 @@ build: off  # отключаем встроенную в appveyor систему
 build_script:
   - yarn build   # команда сборки
 
+before_test:
+  - sudo apt-get install chromium-browser
+
 test_script:
   - yarn lint  # скрипт тестирования
-  - sudo apt-get install chromium-browser
   - yarn test 
   
 
