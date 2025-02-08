@@ -19,13 +19,13 @@ describe("test check", () => {
                 reject();
             }
         });
-
-        browser = await puppeteer.launch({
-            //   headless: false,
-                // headless: 'new',
-                slowMo: 200,
-            //   devtools: false,
-        });
+        browser = await puppeteer.launch()
+        // browser = await puppeteer.launch({
+        //     //   headless: false,
+        //         // headless: 'new',
+        //         // slowMo: 200,
+        //     //   devtools: false,
+        // });
 
         page = await browser.newPage();
     });
