@@ -23,7 +23,7 @@ describe("test check", () => {
         const options = {
             executablePath: '/usr/bin/chromium-browser',
             // headless: false,
-            // slowMo: 100,
+            slowMo: 100,
             // devtools: false,
         }
         
