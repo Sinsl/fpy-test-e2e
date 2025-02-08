@@ -19,21 +19,22 @@ describe("test check", () => {
                 reject();
             }
         });
-        // browser = await puppeteer.launch()
-        browser = await puppeteer.launch({
+
+        const options = {
             executablePath: '/usr/bin/chromium-browser',
-            //   headless: false,
-                // headless: 'new',
-                // slowMo: 100,
-            //   devtools: false,
-        });
+            // headless: false,
+            // slowMo: 100,
+            // devtools: false,
+        }
+        
+        browser = await puppeteer.launch(options);
 
         page = await browser.newPage();
     });
 
     afterAll(async () => {
-        // await page.close()
-        // await browser.close()
+        await page.close()
+        await browser.close()
         await server.kill();
     });
 
