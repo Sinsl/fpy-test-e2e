@@ -10,7 +10,6 @@ branches:
 cache: off  # кеширование
 
 install:
-  - sudo apt-get install chromium-browser
   - yarn  # команда установки зависимостей
 
 build: off  # отключаем встроенную в appveyor систему сборки
@@ -20,6 +19,7 @@ build_script:
 
 test_script:
   - yarn lint  # скрипт тестирования
+  - sudo apt-get install chromium-browser
   - yarn test 
   
 
